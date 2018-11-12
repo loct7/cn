@@ -20,5 +20,4 @@ func (dbWork *DatabaseWork) Init(cfg *Configuration) {
 	dbWork.DB.SetMaxOpenConns(20)
 	dbWork.DB.SetMaxIdleConns(20)
 	CheckError(err)
-
 }
