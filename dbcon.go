@@ -2,14 +2,14 @@ package cn
 
 import "database/sql"
 
-type databaseWork struct {
+type DatabaseWork struct {
 	DB  *sql.DB
-	Cfg *configuration
+	Cfg *Configuration
 }
 
 // Connect to DB
 
-func (dbWork *databaseWork) Init(cfg *configuration) {
+func (dbWork *DatabaseWork) Init(cfg *Configuration) {
 	dbWork.Cfg = cfg
 	var err error
 	dbWork.DB, err = sql.Open("mysql", dbWork.Cfg.User+":"+dbWork.Cfg.Password+"@tcp("+dbWork.Cfg.Host+":"+dbWork.Cfg.Port+")/"+dbWork.Cfg.Database)

@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 )
 
-type configuration struct {
+type Configuration struct {
 	Host     string `json:"host"`
 	Port     string `json:"port"`
 	Database string `json:"database"`
@@ -13,7 +13,7 @@ type configuration struct {
 	Password string `json:"password"`
 }
 
-func (cfg *configuration) Load(configFilePath string) {
+func (cfg *Configuration) Load(configFilePath string) {
 	//Read local Json-file
 	var fcfg []byte
 	var err error
