@@ -9,6 +9,7 @@ import (
 type DatabaseWork struct {
 	DB  *sql.DB
 	Cfg *Configuration
+	DB2 *sql.DB
 }
 
 // Connect to DB
