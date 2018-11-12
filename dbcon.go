@@ -1,6 +1,10 @@
 package cn
 
-import "database/sql"
+import (
+	"database/sql"
+
+	_ "github.com/go-sql-driver/mysql"
+)
 
 type DatabaseWork struct {
 	DB  *sql.DB
