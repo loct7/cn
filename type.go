@@ -11,6 +11,8 @@ type Configuration struct {
 	Database string `json:"database"`
 	User     string `json:"user"`
 	Password string `json:"password"`
+	Url      string `json:"url"`
+	Num string `json:"pagenum"`
 }
 
 func (cfg *Configuration) Load(configFilePath string) {
